@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap')
+$background: #ffff
+$background-secondary: #0000EC
+$background-gradient: #0000A3
+$font-color-nav: #ffff
+$font-color-description: #060A24
+$breakpoint-desktop: 862px
+$font-family-mono: 'IBM Plex Mono', monospace
+$font-family-plex: 'IBM Plex Sans', sans-serif
+$button1-color: #00F3BB
+
+@mixin titlesmobile
+    font-family: $font-family-plex
+    font-size: 36px
+    line-height: 42px
+    font-weight: normal
+    padding-left: 5%
+
+@mixin descriptionmobile
+    font-family: $font-family-mono
+    color: $font-color-description
+    font-size: 14px
+    line-height: 22px
+    font-weight:  normal
+    padding-left: 5%
+    padding-right: 5%
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    list-style: none
+
+html, body, main, header
+    width: 100%
+
+a:link, a:visited, a:active
+    text-decoration: none
+
+header
+    background-color: $background
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 10px
+    padding-left: 5%
+    padding-right: 5.94%
+
+.nav-bar
+    position: absolute
+    right: 0px
+    top: 44px
+    background-color: $background-secondary
+    width: 100%
+    padding-left: 5%
+    padding-top: 16px
+
+.nav-a
+    color: $font-color-nav
+    font-family: $font-family-mono
+    font-size: 16px
+    line-height: 28px
+
+.nav
+    padding-bottom: 24px
+
+.resp-menu nav
+  display: none
+
+.checkbox
+    display: none
+
+.fas 
+    font-size: 18px
+
+.check
+    cursor: pointer
+
+.resp-menu input:checked ~ nav
+  display: block
+
+.title
+    @include titlesmobile
+    color: $font-color-description
+    
+.title:first-child
+    padding-top: 29px
+
+.tachar
+    text-decoration: line-through
+
+.descriptionmobile
+    @include descriptionmobile
+    padding-top: 16px
+    padding-bottom: 36px
+
+.descriptiondesktop
+        display: none
+
+.button1
+    display: flex
+    width: 90%
+    height: 48px
+    background-color: $button1-color
+    margin-left: 5%
+    margin-right: 5%
+    margin-bottom: 24px
+    justify-content: center
+    align-items: center
+
+.button1text
+    font-family: $font-family-mono
+    color: $font-color-description
+    font-size: 16px
+    line-height: 22px
+
+.section2
+    background: $background-secondary
+    background: linear-gradient(180deg, $background-secondary 0%, $background-gradient 100%)
+    width: 100%
+    height: 1203.5px
+    clip-path: polygon(0 3%,100% 0,100% calc(100% - 3%),0 100%)
+
+.title2
+    @include titlesmobile
+    color: $font-color-nav
+    padding-top: 64px
+    padding-bottom: 21px
+
+.spotframe
+    padding-right: 3.44%
+    padding-left: 3.44%
+
+.imagephone
+    height: 519px
+    transform: translateY(-95px)
+    position: absolute
+
+.title3
+    @include titlesmobile
+    color: $font-color-description
+    padding-right: 5%
+    padding-top: 450.5px
+    padding-bottom: 8px  
+
+.description2
+    @include descriptionmobile
+
+.description2:nth-child(2n)
+    padding-top: 12px
+
+.title4
+    @include titlesmobile
+    color: $font-color-description
+    padding-top: 54px
+    padding-bottom: 14px
+
+.imagegallery
+    width: 100%
+
+.gallery
+    display: flex
+    flex-direction: column
+
+.title5
+    @include titlesmobile
+    color: $font-color-description
+    padding-right: 5%
+    padding-top: 48px
+    padding-bottom: 37px
+
+.temas
+    display: flex
+    flex-direction: column
+
+.figuretemas
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.descriptiontema
+    font-family: $font-family-plex
+    color: $font-color-description
+    font-size: 24px
+    line-height: 32px
+    font-weight: bold
+
+.descriptiontema
+    padding-top: 13px
+    padding-bottom: 54px
+
+.descriptiontema:nth-child(2)
+    padding-bottom: 49px
+
+.descriptiontema:nth-child(8)
+    padding-bottom: 42px
+
+.title6
+    @include titlesmobile
+    color: $font-color-nav
+    padding-right: 5%
+    padding-top: 64px
+    padding-bottom: 36px
+    text-align: center
+
+.section5
+    background: $background-secondary
+    background: linear-gradient(-90deg, $background-secondary 0%, $background-gradient 100%)
+    width: 100%
+    height: 341px
+    clip-path: polygon(0 10%,100% 0,100% 100%,0 100%)
+
+.button2
+    display: flex
+    width: 90%
+    height: 48px
+    background-color: $button1-color
+    margin-left: 5%
+    margin-right: 5%
+    margin-bottom: 24px
+    justify-content: center
+    align-items: center
+
+.button2text
+    font-family: $font-family-mono
+    color: $font-color-description
+    font-size: 16px
+    line-height: 22px
+
+.fab
+    font-size: 18px
+
+.footer
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.iconsfooter
+    width: 100%
+    display: flex
+    justify-content: space-around
+    padding-top: 16px
+    padding-bottom: 31px
+    padding-left: 14.0625%
+    padding-right: 14.0625%
+    
+.description3
+    font-family: $font-family-mono
+    color: $font-color-description
+    font-size: 14px
+    line-height: 22px
+    padding-top: 24px
+
+@media screen and (min-width: $breakpoint-desktop)
+  
+    .resp-menu nav
+        display: block
+
+    .nav-bar
+        position: inherit
+        background-color: $background
+        padding: 0
+
+    .nav-a
+        color: $font-color-description
+    
+    ul
+        display: flex
+        flex-direction: row
+        align-content: center
+
+    .check
+        display: none
+    
+    .nav
+        padding-bottom: 0px
+        padding-right: 24px
+        padding-left: 24px
+    
+    .imageheader
+        width: 36px
+        height: 36px
+
+    header
+        padding: 22px
+        padding-right: 72px
+        padding-left: 6.94%
+
+    .titleresponsive
+        display: flex
+    
+    .title
+        padding: 0px
+        padding-top: 120px
+        font-size: 64px
+        line-height: 84px
+    
+    .title:first-child
+        padding-left: 13.89%
+        padding-top: 120px
+
+    .bluedot
+        color: $background-secondary
+
+    .descriptionmobile
+        display: none
+
+    .descriptiondesktop
+        display: block
+        font-family: $font-family-mono
+        color: $font-color-description
+        font-size: 16px
+        line-height: 24px
+        font-weight: normal
+        padding-left: 13.89%
+        padding-right: 42.5%
+        padding-bottom: 56px
+
+    .button1
+        margin: 0px
+        width: 15.69%
+        height: 56px
+        margin-left: 13.89%
+        margin-bottom: 5px
+
+    .button1text
+        font-size: 18px
+        line-height: 24px
+
+    .section2
+        width: 100%
+        height: 1042.6px
+        clip-path: polygon(0 15%,100% 0,100% calc(100% - 15%),0 100%)
+
+    .title2
+        font-size: 48px
+        line-height: 62px
+        padding-left: 13.89%
+        padding-top: 186px
+        padding-bottom: 26px
+
+    .spotify1
+        display: flex
+        flex-direction: row
+        padding-left: 6.94%
+        padding-right: 6.94%
+    
+    .spotify2
+        display: flex
+        flex-direction: row
+        padding-top: 72px
+        padding-left: 6.94%
+        padding-right: 6.94%
+        
+    .spotframe
+        padding: 0px
+
+    .spotframe:nth-child(2n)
+        padding-left: 72px
+
+    .imagephone
+        width: auto
+        height: 660px
+        transform: translateY(-170px)
+        position: absolute
+        padding-left: 13.89%
+
+    .title3
+        font-size: 48px
+        line-height: 62px
+        padding-left: 50%
+        padding-top: 20.4px
+        padding-bottom: 24px
+    
+    .description2
+        font-size: 16px
+        line-height: 24px
+        padding-left: 50%
+        padding-right: 17.78%
+
+    .description2:nth-child(2n)
+        padding-top: 12px
+
+    .title4
+        font-size: 48px
+        line-height: 62px
+        padding-left: 13.89%
+        padding-top: 245px
+        padding-bottom: 36px
+
+    .gallery
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+
+    .title5
+        font-size: 48px
+        line-height: 62px
+        padding-left: 13.89%
+        padding-top: 64px
+        padding-bottom: 69px
+
+    .temas
+        display: flex
+        flex-direction: row
+        justify-content: space-evenly
+
+    .figuretemas
+        display: flex
+        flex-direction: column
+
+    .descriptiontema
+        font-family: $font-family-plex
+        color: $font-color-description
+        font-size: 24px
+        line-height: 32px
+        font-weight: bold
+
+    .descriptiontema
+        padding-top: 29px
+
+    .title6
+        font-size: 48px
+        line-height: 62px
+        padding: 0px
+        padding-top: 213px
+        padding-bottom: 36px
+
+    .section5
+        height: 518px
+        clip-path: polygon(0 20%,100% 0,100% 100%,0 100%)
+        display: flex
+        flex-direction: column
+        align-items: center 
+
+    .button2
+        width: 23.96%
+        margin-top: 36px
+        height: 56px
+        margin: 0
+
+    .description3
+        font-size: 16px
+        line-height: 28px
+        padding-top: 36px
+        padding-bottom: 31px
+    
+    .fab
+        padding-left: 36px
+
+    .footer
+        flex-direction: row
+        justify-content: space-between
+        padding-left: 6.94%
+        padding-right: 6.94%
+
+    .iconsfooter
+        padding: 0
+        width: auto
+
+       
+
+
