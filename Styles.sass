@@ -3,11 +3,14 @@ $background: #ffff
 $background-secondary: #0000EC
 $background-gradient: #0000A3
 $font-color-nav: #ffff
+$hover-color: #00F0B8
+$button1-color: #00F3BB
+$button-gradient-color: #0000FE
 $font-color-description: #060A24
-$breakpoint-desktop: 862px
+$breakpoint-desktop: 872px
 $font-family-mono: 'IBM Plex Mono', monospace
 $font-family-plex: 'IBM Plex Sans', sans-serif
-$button1-color: #00F3BB
+
 
 @mixin titlesmobile
     font-family: $font-family-plex
@@ -22,8 +25,7 @@ $button1-color: #00F3BB
     font-size: 14px
     line-height: 22px
     font-weight:  normal
-    padding-left: 5%
-    padding-right: 5%
+    padding: 0 5% 0 5%
 
 *
     margin: 0
@@ -42,9 +44,7 @@ header
     display: flex
     justify-content: space-between
     align-items: center
-    padding: 10px
-    padding-left: 5%
-    padding-right: 5.94%
+    padding: 10px 5.94% 10px 5%
 
 .nav-bar
     position: absolute
@@ -52,8 +52,7 @@ header
     top: 44px
     background-color: $background-secondary
     width: 100%
-    padding-left: 5%
-    padding-top: 16px
+    padding: 16px 0 0 5%
 
 .nav-a
     color: $font-color-nav
@@ -61,11 +60,21 @@ header
     font-size: 16px
     line-height: 28px
 
-.nav
+.nav-a:hover
+    text-decoration: line-through
+    color: $button1-color
+    font-weight: 500
+
+.nav-a:active
+    text-decoration: line-through
+    opacity: 56%
+    color: $font-color-description
+
+.nav-li
     padding-bottom: 24px
 
 .resp-menu nav
-  display: none
+    display: none
 
 .checkbox
     display: none
@@ -77,11 +86,18 @@ header
     cursor: pointer
 
 .resp-menu input:checked ~ nav
-  display: block
+    display: block
+
+.resp-menu input:checked ~ label .fa-bars
+    display: none
+
+.resp-menu input:not(:checked) ~ label .fa-times
+    display: none
 
 .title
     @include titlesmobile
     color: $font-color-description
+    width: 80%
     
 .title:first-child
     padding-top: 29px
@@ -95,24 +111,28 @@ header
     padding-bottom: 36px
 
 .descriptiondesktop
-        display: none
+    display: none
 
 .button1
     display: flex
     width: 90%
     height: 48px
     background-color: $button1-color
-    margin-left: 5%
-    margin-right: 5%
-    margin-bottom: 24px
+    margin: 0 5% 24px 5%
     justify-content: center
     align-items: center
+    cursor: pointer
+
+.button1:hover
+    background: linear-gradient(-90deg, $button-gradient-color 0%, $hover-color 100%)
 
 .button1text
     font-family: $font-family-mono
     color: $font-color-description
-    font-size: 16px
-    line-height: 22px
+    font-weight: 500
+
+.button1text:hover
+    color: $background
 
 .section2
     background: $background-secondary
@@ -131,22 +151,27 @@ header
     padding-right: 3.44%
     padding-left: 3.44%
 
+iframe
+    width: 100%
+    height: 232px
+    border: none
+    overflow: hidden
+
 .imagephone
-    height: 519px
+    width: 100%
     transform: translateY(-95px)
-    position: absolute
 
 .title3
     @include titlesmobile
     color: $font-color-description
     padding-right: 5%
-    padding-top: 450.5px
-    padding-bottom: 8px  
+    padding-bottom: 8px
+    margin-top: -72px
 
 .description2
     @include descriptionmobile
 
-.description2:nth-child(2n)
+.description2:nth-child(3)
     padding-top: 12px
 
 .title4
@@ -165,7 +190,6 @@ header
 .title5
     @include titlesmobile
     color: $font-color-description
-    padding-right: 5%
     padding-top: 48px
     padding-bottom: 37px
 
@@ -183,7 +207,7 @@ header
     color: $font-color-description
     font-size: 24px
     line-height: 32px
-    font-weight: bold
+    font-weight: 600
 
 .descriptiontema
     padding-top: 13px
@@ -221,14 +245,22 @@ header
     justify-content: center
     align-items: center
 
+.button2:hover
+    background: linear-gradient(-90deg, $button-gradient-color 0%, $hover-color 100%)
+
 .button2text
     font-family: $font-family-mono
+    font-weight: 500
     color: $font-color-description
     font-size: 16px
     line-height: 22px
 
+.button2text:hover
+    color: $background
+
 .fab
     font-size: 18px
+    color: $font-color-description
 
 .footer
     display: flex
@@ -272,19 +304,15 @@ header
     .check
         display: none
     
-    .nav
-        padding-bottom: 0px
-        padding-right: 24px
-        padding-left: 24px
+    .nav-li
+        padding: 0 24px 0 24px
     
     .imageheader
         width: 36px
         height: 36px
 
     header
-        padding: 22px
-        padding-right: 72px
-        padding-left: 6.94%
+        padding: 22px 5.27% 22px 6.94%         
 
     .titleresponsive
         display: flex
@@ -359,8 +387,7 @@ header
         padding-left: 72px
 
     .imagephone
-        width: auto
-        height: 660px
+        width: 42.1%
         transform: translateY(-170px)
         position: absolute
         padding-left: 13.89%
@@ -368,25 +395,29 @@ header
     .title3
         font-size: 48px
         line-height: 62px
-        padding-left: 50%
-        padding-top: 20.4px
-        padding-bottom: 24px
+        margin: 20.4px 0px 24px 50%
+        padding: 0px
     
     .description2
         font-size: 16px
         line-height: 24px
-        padding-left: 50%
-        padding-right: 17.78%
+        margin-left: 50%
+        padding: 0px
+        max-width: 464px
 
     .description2:nth-child(2n)
         padding-top: 12px
+        margin-bottom: 200px
+
+    .description2:nth-child(3)
+        padding-top: 0px
 
     .title4
         font-size: 48px
         line-height: 62px
         padding-left: 13.89%
-        padding-top: 245px
         padding-bottom: 36px
+        padding-top: 64px
 
     .gallery
             display: grid
@@ -402,21 +433,21 @@ header
     .temas
         display: flex
         flex-direction: row
-        justify-content: space-evenly
+        justify-content: space-between
+        margin: 0 15.27% 34px 15.27%
 
     .figuretemas
         display: flex
         flex-direction: column
-
+        
     .descriptiontema
-        font-family: $font-family-plex
-        color: $font-color-description
-        font-size: 24px
-        line-height: 32px
-        font-weight: bold
+        padding: 0px
+        max-width: 220px
+        text-align: center
+        margin-top: 13px
 
-    .descriptiontema
-        padding-top: 29px
+    .descriptiontema:nth-child(2)
+        padding: 0px
 
     .title6
         font-size: 48px
